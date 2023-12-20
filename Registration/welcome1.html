@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration</title>
+	<link rel="stylesheet" href="../scss/style.css">
+</head>
+
+<body>
+	<div class="registration-body">
+		<div class="registration-wrapp">
+			<div class="registration-left" style="display:none">
+
+			</div>
+			<div class="registration-right">
+				<div class="registration-main-info">
+					<div class="main-info-top">
+						<div class="main-search"></div>
+						<div class="dinamic-info">
+							<div class="dinamic-internet" id="internet">
+								<span class="internet-svg"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="20"
+										viewBox="0 0 26 20" fill="white">
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M11.3984 18C11.3984 17.4846 11.8163 17.0667 12.3318 17.0667H13.6651C14.1806 17.0667 14.5984 17.4846 14.5984 18C14.5984 18.5155 14.1806 18.9334 13.6651 18.9334H12.3318C11.8163 18.9334 11.3984 18.5155 11.3984 18Z"
+											stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M7.86617 13.0143C7.86541 13.0162 7.86464 13.0181 7.86386 13.02C7.86338 13.0212 7.86373 13.0203 7.86386 13.02L7.86516 13.0168L7.86617 13.0143ZM18.1361 13.02L18.1317 13.0099C18.126 12.9973 18.1152 12.9737 18.0988 12.9409C18.0659 12.875 18.0108 12.7724 17.9302 12.6452C17.7687 12.3901 17.508 12.0414 17.1222 11.6906C16.3657 11.0029 15.0859 10.2667 13 10.2667C10.9141 10.2667 9.6343 11.0029 8.87782 11.6906C8.49198 12.0414 8.2313 12.3901 8.06974 12.6452C7.98917 12.7724 7.93412 12.875 7.90119 12.9409C7.88476 12.9737 7.87393 12.9973 7.86829 13.0099L7.86386 13.02C7.67005 13.4941 7.12972 13.7238 6.65336 13.5333C6.17476 13.3418 5.94197 12.7987 6.13341 12.3201L6.99999 12.6667C6.13341 12.3201 6.13319 12.3206 6.13341 12.3201L6.13429 12.3179L6.13531 12.3153L6.13774 12.3094L6.14423 12.2938C6.14929 12.2819 6.15583 12.2667 6.16391 12.2486C6.18008 12.2124 6.20246 12.1643 6.2316 12.1061C6.28981 11.9896 6.37539 11.8318 6.49274 11.6465C6.72701 11.2766 7.09133 10.792 7.62216 10.3094C8.699 9.33046 10.4192 8.40002 13 8.40002C15.5807 8.40002 17.301 9.33046 18.3778 10.3094C18.9086 10.792 19.273 11.2766 19.5072 11.6465C19.6246 11.8318 19.7102 11.9896 19.7684 12.1061C19.7975 12.1643 19.8199 12.2124 19.8361 12.2486C19.8441 12.2667 19.8507 12.2819 19.8557 12.2938L19.8622 12.3094L19.8647 12.3153L19.8657 12.3179C19.8659 12.3184 19.8666 12.3201 19 12.6667L19.8666 12.3201C20.058 12.7987 19.8252 13.3418 19.3466 13.5333C18.8703 13.7238 18.3299 13.4941 18.1361 13.02ZM18.1338 13.0143C18.1338 13.0143 18.1338 13.0143 18.1338 13.0143V13.0143Z"
+											stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M2.50091 8.41712L2.50126 8.41641L2.50453 8.4101C2.50881 8.40184 2.51628 8.38758 2.52698 8.3677C2.5484 8.32792 2.58272 8.26577 2.63025 8.18443C2.72537 8.02164 2.87298 7.7827 3.07544 7.49294C3.48117 6.91229 4.10238 6.13447 4.95691 5.35709C6.65968 3.80805 9.27825 2.26669 12.9993 2.26669C16.7203 2.26669 19.3389 3.80805 21.0417 5.35709C21.8962 6.13447 22.5174 6.91229 22.9231 7.49294C23.1256 7.7827 23.2732 8.02164 23.3683 8.18443C23.4159 8.26577 23.4502 8.32792 23.4716 8.3677C23.4823 8.38758 23.4898 8.40184 23.4941 8.4101L23.4973 8.41641L23.4977 8.41712C23.4979 8.41749 23.498 8.41786 23.4982 8.41824C23.7288 8.87823 24.2883 9.06499 24.749 8.83533C25.2103 8.60536 25.3979 8.04496 25.1679 7.58364L24.3326 8.00002C25.1679 7.58364 25.1677 7.58322 25.1675 7.58277L25.167 7.58176L25.1657 7.57927L25.1623 7.57246L25.1516 7.5517C25.1429 7.53473 25.1307 7.51156 25.1151 7.48261C25.0839 7.42473 25.039 7.34365 24.98 7.2427C24.8621 7.04091 24.6875 6.75901 24.4533 6.42377C23.9856 5.75443 23.2753 4.86558 22.2978 3.9763C20.3364 2.192 17.2883 0.400024 12.9993 0.400024C8.71025 0.400024 5.66216 2.192 3.70078 3.9763C2.72324 4.86558 2.01301 5.75443 1.54531 6.42377C1.31106 6.75901 1.13646 7.04091 1.01855 7.2427C0.959563 7.34365 0.914663 7.42473 0.883491 7.48261C0.867901 7.51156 0.855735 7.53473 0.846947 7.5517L0.836288 7.57246L0.832847 7.57927L0.831596 7.58176L0.831087 7.58277C0.830866 7.58322 0.830657 7.58364 1.66596 8.00002L0.830657 7.58364C0.600692 8.04496 0.788247 8.60536 1.24957 8.83533C1.71066 9.06517 2.27072 8.87793 2.50091 8.41712Z"
+											stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg></span>
+							</div>
+							<div class="dinamic-degrees">
+								<span id="degrees">23</span>
+								<span class="degrees-svg">°</span>
+							</div>
+							<div class="dinamic-time">
+								<span id="time">22:15</span>
+							</div>
+						</div>
+					</div>
+					<div class="welcome-avatars">
+						<div class="welcome-avatars-wrapper">
+							<div class="avatars avatar-one">
+								<span class="avatars-photo"><img src="../Images/avatar_male.jpg" alt=""></span>
+								<div class="avatars-title" id="user_name">Олег</div>
+							</div>
+							<div class="avatars avatar-two">
+								<span class="avatars-photo"><img src="../Images/avatar_female.jpg" alt=""></span>
+								<div class="avatars-title" id="user_name">Екатерина</div>
+							</div>
+						</div>
+					</div>
+					<button id="power_of">
+						<span class="power-of-svg">
+							<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+								<circle cx="26" cy="26" r="25" fill="url(#paint0_linear_146_29643)" fill-opacity="0.2"
+									stroke="url(#paint1_linear_146_29643)" stroke-width="2" />
+								<circle cx="26.0005" cy="26" r="22.7368" fill="url(#paint2_linear_146_29643)" />
+								<g filter="url(#filter0_d_146_29643)">
+									<path fill-rule="evenodd" clip-rule="evenodd"
+										d="M21.2205 17.7086C21.2205 17.261 20.7589 16.9658 20.3704 17.188C17.3208 18.9321 15.2656 22.217 15.2656 25.9818C15.2656 31.5727 19.798 36.1051 25.3889 36.1051C30.9799 36.1051 35.5122 31.5727 35.5122 25.9818C35.5122 22.4833 33.7376 19.3994 31.0395 17.581C30.6508 17.319 30.1528 17.6137 30.1528 18.0825C30.1528 18.2954 30.2629 18.4922 30.4385 18.6127C32.7834 20.2226 34.3213 22.9226 34.3213 25.9818C34.3213 30.915 30.3221 34.9141 25.3889 34.9141C20.4557 34.9141 16.4566 30.915 16.4566 25.9818C16.4566 22.6866 18.2409 19.8082 20.896 18.26C21.0933 18.145 21.2205 17.9369 21.2205 17.7086Z"
+										fill="#D9D9D9" />
+									<rect x="24.7949" y="15.2631" width="1.19098" height="5.95489" rx="0.59549" fill="#D9D9D9" />
+								</g>
+								<defs>
+									<filter id="filter0_d_146_29643" x="13.2656" y="12.2631" width="24.2461" height="24.842"
+										filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+										<feFlood flood-opacity="0" result="BackgroundImageFix" />
+										<feColorMatrix in="SourceAlpha" type="matrix"
+											values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+										<feOffset dy="-1" />
+										<feGaussianBlur stdDeviation="1" />
+										<feComposite in2="hardAlpha" operator="out" />
+										<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0" />
+										<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_146_29643" />
+										<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_146_29643"
+											result="shape" />
+									</filter>
+									<linearGradient id="paint0_linear_146_29643" x1="26" y1="2" x2="26" y2="50"
+										gradientUnits="userSpaceOnUse">
+										<stop />
+										<stop offset="1" />
+									</linearGradient>
+									<linearGradient id="paint1_linear_146_29643" x1="26" y1="2" x2="26" y2="50"
+										gradientUnits="userSpaceOnUse">
+										<stop stop-opacity="0.63" />
+										<stop offset="1" stop-color="#4A4848" />
+									</linearGradient>
+									<linearGradient id="paint2_linear_146_29643" x1="26.0005" y1="3.26318" x2="26.0005"
+										y2="48.7369" gradientUnits="userSpaceOnUse">
+										<stop offset="0.226913" stop-color="#38393E" />
+										<stop offset="1" stop-color="#18191D" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
