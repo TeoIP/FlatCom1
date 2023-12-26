@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -540,13 +540,24 @@ select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  display: block;
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  background: linear-gradient(137deg, #0F1113 0%, rgb(36, 39, 44) 90.73%);
+  background-clip: padding-box;
   width: 64px;
   height: 64px;
+}
+.checkbox-change::after {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(137deg, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0.1) 100%);
+  z-index: -1;
   border-radius: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.21);
-  background: linear-gradient(137deg, #0F1113 0%, rgba(36, 39, 44, 0) 90.73%);
-  position: relative;
 }
 
 .code-write::before {
@@ -2630,8 +2641,9 @@ select {
   align-items: flex-start;
   gap: 4px;
   border-radius: 50px;
-  border: 1px solid rgba(0, 0, 0, 0.21);
+  border: 1px solid transparent;
   background: linear-gradient(132deg, #0F1113 29.38%, rgba(36, 39, 44, 0) 93.57%);
+  background-clip: padding-box;
   outline: none;
   color: #FFF;
   font-family: Roboto;
@@ -2639,6 +2651,7 @@ select {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  position: relative;
 }
 
 .selected-selector {
@@ -2975,6 +2988,539 @@ select {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.delete-user {
+  margin-top: 74px;
+}
+.delete-user-wrapp {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.delete-user-top {
+  display: flex;
+  justify-content: center;
+}
+.delete-user-svg {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #000;
+}
+.delete-user-svg svg {
+  display: flex;
+  margin-bottom: 35px;
+  width: 89px;
+  height: 103px;
+}
+.delete-user-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+.delete-user-word {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.delete-user-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+.delete-user-name {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+.delete-user-btns {
+  display: flex;
+  gap: 16px;
+}
+.delete-user-btn-cancel {
+  display: flex;
+  width: 290px;
+  padding: 16px 19px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  border-radius: 40px;
+  border: 1px solid #363B42;
+  background: none;
+}
+.delete-user-btn-confirm {
+  display: flex;
+  width: 290px;
+  padding: 16px 97px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  background: linear-gradient(180deg, #3C4047 -33.04%, #1A1C1F 100%);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  position: relative;
+  line-height: 24px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.delete-user-btn-confirm::after {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(95, 101, 116) 100%);
+  border-radius: 40px;
+  z-index: -1;
+}
+
+.profile-settings-wrapper {
+  display: flex;
+  gap: 48px;
+}
+.profile-settings-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.profile-settings-menu-title {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 48px;
+  margin-bottom: 48px;
+}
+.profile-settings-menu-ava {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 8px;
+}
+.profile-settings-menu-ava-select {
+  display: flex;
+  padding: 6.8px 0;
+}
+.profile-settings-menu-ava-main {
+  display: flex;
+  gap: 24px;
+}
+.profile-settings-menu-ava-main img {
+  max-width: 96px;
+  max-height: 96px;
+  flex-shrink: 0;
+  border-radius: 50px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  overflow: hidden;
+}
+.profile-settings-menu-ava-name {
+  width: 136px;
+  word-wrap: break-word;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+.profile-settings-menu-all {
+  display: flex;
+  flex-direction: column;
+}
+.profile-settings-menu-one {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  position: relative;
+}
+.profile-settings-menu-one-svg {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 10px 0;
+}
+.profile-settings-menu-one-open {
+  display: flex;
+  padding: 6.8px 0;
+}
+.profile-settings-menu-one-notification-count {
+  position: absolute;
+  right: 48px;
+  color: #F8610B;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.profile-settings-menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 467px;
+  height: 56px;
+  margin-top: 36px;
+  position: relative;
+  padding: 16px 97px;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  background: linear-gradient(180deg, #3C4047 -33.04%, #1A1C1F 100%);
+  background-clip: padding-box;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.profile-settings-menu-btn::after {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(95, 101, 116) 100%);
+  border-radius: 40px;
+  z-index: -1;
+}
+.profile-settings-ava {
+  width: 100%;
+  height: 100%;
+}
+.profile-settings-ava-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  width: 100%;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.profile-settings-ava-top {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-settings-ava-top-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.profile-settings-ava-selected {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.profile-settings-ava-selected-photo img {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 50px;
+}
+.profile-settings-ava-selected-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 71.667px;
+  border: 2px solid transparent;
+  background: linear-gradient(320deg, #202940 14.78%, #10393C 95.73%);
+  background-clip: padding-box;
+  position: relative;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 33.333px;
+}
+.profile-settings-ava-selected-initials::after {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 71.667px;
+  background: linear-gradient(135deg, rgb(135, 233, 255) 0%, rgb(48, 0, 239) 100%);
+  z-index: -1;
+}
+.profile-settings-all-avatars-wrapper {
+  max-height: 408px;
+  overflow-y: scroll;
+}
+.profile-settings-all-avatars-content {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(6, 48px);
+  grid-row-gap: 24px;
+}
+.profile-settings-one-avatars-svg img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.profile-settings-notification {
+  width: 100%;
+}
+.profile-settings-notification-wrapper {
+  width: 100%;
+  height: 560px;
+  padding: 24px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.profile-settings-notification-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.profile-settings-notification-all {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-height: 512px;
+  overflow-y: scroll;
+  padding-right: 19px;
+}
+.profile-settings-notification-all::-webkit-scrollbar {
+  width: 4px;
+  height: 110vh;
+}
+.profile-settings-notification-all::-webkit-scrollbar-track {
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  background: linear-gradient(137deg, #0F1113 0%, rgba(36, 39, 44, 0) 90.73%);
+}
+.profile-settings-notification-all::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background: #9CA4AC;
+}
+.profile-settings-notification-one {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.profile-settings-notification-one-title {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-settings-notification-one-title-from {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.profile-settings-notification-one-title-when {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.profile-settings-notification-one-subtitle {
+  display: flex;
+  justify-content: space-between;
+}
+.profile-settings-notification-one-subtitle-word {
+  max-width: 367px;
+  flex-wrap: wrap;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.profile-notification-svg,
+.profile-protection-svg {
+  display: flex;
+  border-radius: 11.667px;
+  background: #000;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.profile-notification-svg svg {
+  position: absolute;
+  left: 5.5px;
+  bottom: 6px;
+}
+
+.profile-protection-svg svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#avatar-log-in {
+  border: none;
+  width: 48px;
+  height: 48px;
+  background-image: url("../Images/avatar_male.jpg");
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.full-screen-notification {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.full-screen-notification-title {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 48px;
+}
+.full-screen-notification-main {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.full-screen-notification-main-word {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.full-screen-notification-time {
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.full-screen-notification-status-btn {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 40px;
+  border: 1px solid #363B42;
+}
+.full-screen-notification-top-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.full-screen-notification-all-info {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+.full-screen-notification-go-to {
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  display: flex;
+  width: 290px;
+  padding: 16px 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  background: linear-gradient(180deg, #3C4047 -33.04%, #1A1C1F 100%);
+  background-clip: padding-box;
+}
+.full-screen-notification-go-to::after {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(95, 101, 116) 100%);
+  border-radius: 40px;
+  z-index: -1;
+}
+
+#notification_id {
+  margin-left: 5px;
 }
 
 @keyframes rotate {
