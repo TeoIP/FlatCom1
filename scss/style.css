@@ -421,10 +421,10 @@ select {
   width: 290px;
   padding: 16px 19px;
   border-radius: 40px;
-  border: 2px inset;
-  -o-border-image: linear-gradient(90deg, hsl(218, 8%, 26%) 0%, hsl(216, 9%, 11%) 100%);
-     border-image: linear-gradient(90deg, hsl(218, 8%, 26%) 0%, hsl(216, 9%, 11%) 100%);
+  border: 2px solid transparent;
+  position: relative;
   background: linear-gradient(180deg, #3C4047 -33.04%, #1A1C1F 100%);
+  background-clip: padding-box;
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
   font-feature-settings: "rclt" off;
@@ -433,6 +433,17 @@ select {
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+}
+#main-button::after {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(95, 101, 116) 100%);
+  border-radius: 40px;
+  z-index: -1;
 }
 
 #loading-svg {
@@ -469,6 +480,7 @@ select {
   font-style: normal;
   font-weight: 500;
   line-height: 133.333%;
+  max-width: 596px;
 }
 .code-checkbox {
   display: flex;
@@ -740,6 +752,7 @@ select {
   outline: none;
   border: none;
   max-width: 235px;
+  color: #fff;
 }
 
 #main-search:focus {
@@ -2996,6 +3009,8 @@ select {
 .delete-user-wrapp {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  max-width: 596px;
   gap: 32px;
 }
 .delete-user-top {
@@ -3028,6 +3043,14 @@ select {
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
 }
 .delete-user-title {
   color: var(--Dark-Colors-Text---Primary, #FFF);
@@ -3106,6 +3129,8 @@ select {
 
 .profile-settings-wrapper {
   display: flex;
+  width: 100%;
+  height: 100%;
   gap: 48px;
 }
 .profile-settings-menu {
@@ -3521,6 +3546,384 @@ select {
 
 #notification_id {
   margin-left: 5px;
+}
+
+.profile-settings-pass {
+  width: 100%;
+  max-height: 560px;
+}
+.profile-settings-pass-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  position: relative;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.profile-settings-pass-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+  position: absolute;
+  max-width: 467px;
+  width: 100%;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.profile-settings-pass-word {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.profile-settings-exit {
+  width: 100%;
+  height: 100%;
+}
+.profile-settings-exit-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 24px 28px 24px 20px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.profile-settings-exit-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profile-settings-exit-all-acc {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.profile-settings-exit-account {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 24px;
+}
+.profile-settings-exit-account-left {
+  display: flex;
+  align-items: center;
+}
+.profile-settings-exit-account-svg {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 50px;
+}
+.profile-settings-exit-account-left {
+  display: flex;
+  gap: 16px;
+}
+.profile-settings-exit-account-name {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+.profile-settings-exit-button {
+  display: flex;
+  padding: 0 24px;
+  gap: 16px;
+  align-items: center;
+}
+.profile-settings-exit-button-word {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+}
+.profile-settings-exit-button-svg {
+  display: flex;
+  height: 48px;
+  padding: 12px 10px 12px 14px;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 43px;
+  border: 1px solid transparent;
+  background: linear-gradient(320deg, #2F3339 14.78%, #15181C 95.73%);
+  position: relative;
+  background-clip: padding-box;
+}
+.profile-settings-exit-button-svg svg {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 3.25px 4.75px 2.75px 4.75px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.profile-settings-exit-button-svg::after {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 43px;
+  background: linear-gradient(136deg, rgba(255, 255, 255, 0.24) 0%, rgba(0, 0, 0, 0.65) 100%);
+  z-index: -1;
+}
+
+.selected-account::after {
+  content: " ";
+  width: 90%;
+  height: 1px;
+  position: absolute;
+  background: #1E2226;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -16px;
+}
+
+.my-yk {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.my-yk-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.my-yk-main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my-yk-main-top-title {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 48px;
+}
+.my-yk-main-top-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.my-yk-main-top-user-id {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+}
+.my-yk-main-top-user-ava {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.my-yk-main-center {
+  width: 100%;
+}
+.my-yk-main-center-info {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1088px;
+  flex-wrap: wrap;
+}
+.my-yk-main-center-info-card {
+  display: flex;
+  padding: 48px 62px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+  max-width: 244px;
+  width: 100%;
+}
+.my-yk-main-center-info-card-svg {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #000;
+  position: relative;
+}
+.my-yk-main-center-info-card-svg img {
+  display: flex;
+  width: 72px;
+  flex-shrink: 0;
+  height: 72px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.my-yk-main-center-info-card-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+.my-yk-indications {
+  width: 100%;
+  height: 100%;
+}
+.my-yk-indications-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.my-yk-indications-all-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.my-yk-indications-one-card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 48px 24px 24px 24px;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  border-radius: 30px;
+  max-width: 327px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.my-yk-indications-one-card-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+.my-yk-indications-one-card-all-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 24px;
+}
+.my-yk-indications-one-card-all-info-top {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+}
+.my-yk-indications-one-card-all-info-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  padding: 8px 16px;
+}
+.my-yk-indications-one-card-all-info-button-word-main {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.my-yk-indications-one-card-all-info-button-word-time {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.my-yk-indications-one-card-all-info-button-svg {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 6.8px 0px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.my-yk-indications-one-card-month {
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.my-yk-indications-one-card-used {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.my-yk-indications-one-card-used-one {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 9px 0;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.indications-svg {
+  position: absolute;
+  bottom: 17px;
+  left: 45%;
+  transform: translate(-50%);
+}
+
+.critic-time {
+  color: #F00;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #24272C;
 }
 
 @keyframes rotate {
