@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&family=Roboto:wght@300;400;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -2944,20 +2944,23 @@ select {
   gap: 116px;
 }
 
-.add-user-wrapper {
+.add-user-wrapper,
+.add-money-wrapper {
   display: flex;
   flex-direction: column;
   gap: 72px;
   align-items: center;
   width: 596px;
 }
-.add-user-word {
+.add-user-word,
+.add-money-word {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
 }
-.add-user-title {
+.add-user-title,
+.add-money-title {
   color: #FFF;
   font-family: Roboto;
   font-size: 40px;
@@ -2965,7 +2968,8 @@ select {
   font-weight: 300;
   line-height: 48px;
 }
-.add-user-subtitle {
+.add-user-subtitle,
+.add-money-subtitle {
   color: var(--Dark-Colors-Text---Primary, #FFF);
   text-align: center;
   font-feature-settings: "rclt" off;
@@ -2975,7 +2979,8 @@ select {
   font-weight: 500;
   line-height: 28px;
 }
-.add-user-btn {
+.add-user-btn,
+.add-money-btn {
   border-radius: 40px;
   border: 1px solid #363B42;
   display: flex;
@@ -4068,7 +4073,8 @@ select {
   border-radius: 40px;
 }
 
-.my-yk-give-indication-content {
+.my-yk-give-indication-content,
+.my-yk-tarif-wrong-money-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4076,13 +4082,15 @@ select {
   width: 100%;
   gap: 32px;
 }
-.my-yk-give-indication-content-bottom {
+.my-yk-give-indication-content-bottom,
+.my-yk-tarif-wrong-money-content-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 48px;
 }
-.my-yk-give-indication-content-bottom-title {
+.my-yk-give-indication-content-bottom-title,
+.my-yk-tarif-wrong-money-content-bottom-title {
   color: var(--Dark-Colors-Text---Primary, #FFF);
   text-align: center;
   font-feature-settings: "rclt" off;
@@ -4092,11 +4100,13 @@ select {
   font-weight: 500;
   line-height: 28px;
 }
-.my-yk-give-indication-content-bottom-btn {
+.my-yk-give-indication-content-bottom-btn,
+.my-yk-tarif-wrong-money-content-bottom-btn {
   display: flex;
   gap: 16px;
 }
-.my-yk-give-indication-content-bottom-btn-cancel {
+.my-yk-give-indication-content-bottom-btn-cancel,
+.my-yk-tarif-wrong-money-content-bottom-btn-cancel {
   border-radius: 40px;
   border: 1px solid #363B42;
   display: flex;
@@ -4114,7 +4124,9 @@ select {
   font-weight: 500;
   line-height: 24px;
 }
-.my-yk-give-indication-content-bottom-btn-next {
+.my-yk-give-indication-content-bottom-btn-next, .my-yk-give-indication-content-bottom-btn-add-money,
+.my-yk-tarif-wrong-money-content-bottom-btn-next,
+.my-yk-tarif-wrong-money-content-bottom-btn-add-money {
   display: flex;
   width: 290px;
   padding: 16px 97px;
@@ -4135,7 +4147,9 @@ select {
   position: relative;
   background-clip: padding-box;
 }
-.my-yk-give-indication-content-bottom-btn-next::after {
+.my-yk-give-indication-content-bottom-btn-next::after, .my-yk-give-indication-content-bottom-btn-add-money::after,
+.my-yk-tarif-wrong-money-content-bottom-btn-next::after,
+.my-yk-tarif-wrong-money-content-bottom-btn-add-money::after {
   content: " ";
   position: absolute;
   top: -2px;
@@ -4488,6 +4502,778 @@ select {
 
 #need_indication {
   color: #9E4F4F;
+}
+
+.my-yk-pay-done-content, .my-yk-tarif-done-content, .my-yk-tarif-wrong-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 596px;
+  width: 100%;
+  gap: 32px;
+}
+.my-yk-pay-done-content-bottom, .my-yk-tarif-done-content-bottom, .my-yk-tarif-wrong-content-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+.my-yk-pay-done-content-bottom-title, .my-yk-tarif-done-content-bottom-title, .my-yk-tarif-wrong-content-bottom-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+}
+.my-yk-pay-done-content-bottom-btn, .my-yk-tarif-done-content-bottom-btn, .my-yk-tarif-wrong-content-bottom-btn {
+  display: flex;
+  gap: 16px;
+}
+.my-yk-pay-done-content-bottom-btn-done, .my-yk-tarif-done-content-bottom-btn-done, .my-yk-tarif-wrong-content-bottom-btn-done {
+  display: flex;
+  width: 290px;
+  padding: 16px 97px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  background: linear-gradient(180deg, #3C4047 -33.04%, #1A1C1F 100%);
+  position: relative;
+  background-clip: padding-box;
+}
+.my-yk-pay-done-content-bottom-btn-done::after, .my-yk-tarif-done-content-bottom-btn-done::after, .my-yk-tarif-wrong-content-bottom-btn-done::after {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(95, 101, 116) 100%);
+  border-radius: 40px;
+  z-index: -1;
+}
+
+.my-yk-tarif-cards {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 48px;
+  grid-row-gap: 24px;
+  max-height: 542px;
+  overflow-y: scroll;
+  padding-right: 21px;
+  padding-bottom: 90px;
+}
+.my-yk-tarif-cards::-webkit-scrollbar {
+  width: 4px;
+}
+.my-yk-tarif-cards::-webkit-scrollbar-track {
+  margin-bottom: 92px;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  background: linear-gradient(137deg, #0F1113 0%, rgba(36, 39, 44, 0) 90.73%);
+}
+.my-yk-tarif-cards::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background: #9CA4AC;
+}
+.my-yk-tarif-one-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 24px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.my-yk-tarif-one-card-word {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.my-yk-tarif-one-card-info {
+  display: flex;
+  gap: 16px;
+}
+.my-yk-tarif-one-card-info-canals, .my-yk-tarif-one-card-info-speed {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 16px;
+  width: 100%;
+}
+.my-yk-tarif-one-card-info-speed-title, .my-yk-tarif-one-card-info-canals-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.my-yk-tarif-one-card-info-speed-subtitle, .my-yk-tarif-one-card-info-canals-subtitle {
+  color: rgba(255, 255, 255, 0.3);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.my-yk-tarif-one-card-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 97px;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 40px;
+  position: relative;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.change-tarif {
+  border-radius: 40px;
+  border: 2px solid transparent;
+  background: linear-gradient(180deg, #3C4047 -33.04%, #1A1C1F 100%);
+  position: relative;
+  background-clip: padding-box;
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.change-tarif::after {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(95, 101, 116) 100%);
+  z-index: -1;
+  border-radius: 40px;
+}
+
+.used-tarif {
+  background: #26292e;
+  border-radius: 40px;
+  position: relative;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+.used-tarif::after {
+  content: " ";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(95, 101, 116) 100%);
+  z-index: -1;
+  border-radius: 40px;
+}
+
+.my-yk-gap-48 {
+  gap: 48px;
+}
+
+.my-yk-accounts-main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 48px;
+}
+.my-yk-accounts-costs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 40px;
+  border-radius: 30px;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.my-yk-accounts-costs-top {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.my-yk-accounts-costs-top-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my-yk-accounts-costs-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+.my-yk-accounts-costs-nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.my-yk-accounts-costs-nav-prev, .my-yk-accounts-costs-nav-next {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 6.8px 0px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: #24272C;
+  box-shadow: 6px 6px 12px 0px rgba(0, 0, 0, 0.25) inset, -6px -6px 12px 0px rgba(255, 255, 255, 0.05) inset;
+}
+.my-yk-accounts-costs-nav-word {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+.my-yk-accounts-costs-indicators {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my-yk-accounts-costs-one-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 88px;
+}
+.my-yk-accounts-costs-one-indicator-svg {
+  display: flex;
+}
+.my-yk-accounts-costs-one-indicator-name {
+  color: #9A9A9A;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.my-yk-accounts-costs-carousel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.my-yk-accounts-costs-carousel-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.my-yk-accounts-costs-carousel-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 29px;
+}
+.my-yk-accounts-costs-carousel-item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.my-yk-accounts-costs-carousel-item-cost {
+  color: #FFF;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.my-yk-accounts-costs-carousel-item-diagrama {
+  width: 24px;
+  height: 216px;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(95, 101, 116) 100%);
+  border-radius: 40px;
+  fill: linear-gradient(270deg, #3C4047 0%, #1A1C1F 100%);
+  stroke: 1px solid #000;
+  position: relative;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+.my-yk-accounts-costs-carousel-item-diagrama::after {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border-radius: 40px;
+  background: linear-gradient(270deg, rgb(0, 0, 0) 0%, rgb(95, 101, 116) 100%);
+  z-index: -1;
+}
+.my-yk-accounts-costs-carousel-item-diagrama-other {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  background: linear-gradient(180deg, #BEBEBE 1.32%, #434343 100%);
+  border-radius: 40px;
+}
+.my-yk-accounts-costs-carousel-item-diagrama-water {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(179.83deg, #FFE600 -5.39%, #FF7A00 99.85%);
+  border-radius: 40px;
+  bottom: 0;
+}
+.my-yk-accounts-costs-carousel-item-diagrama-electicity {
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(180deg, #BD00FF -2.78%, #D55DFF -2.77%, #8000FF 96.77%);
+  border-radius: 40px;
+  bottom: 0;
+}
+.my-yk-accounts-costs-carousel-item-diagrama-warm {
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(180deg, #02D9FF 1.32%, #008FE9 100%);
+  border-radius: 40px;
+  bottom: 0;
+}
+.my-yk-accounts-costs-carousel-item-month {
+  color: #9A9A9A;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.my-yk-accounts-pay {
+  width: 100%;
+  max-height: 464px;
+  height: 100%;
+  padding: 24px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.my-yk-accounts-pay-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding-right: 12px;
+  gap: 32px;
+  max-height: 394px;
+  overflow-y: scroll;
+}
+.my-yk-accounts-pay-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+.my-yk-accounts-pay-wrapper::-webkit-scrollbar-track {
+  margin-top: 7px;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  background: linear-gradient(137deg, #0F1113 0%, rgba(36, 39, 44, 0) 90.73%);
+}
+.my-yk-accounts-pay-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background: #9CA4AC;
+}
+.my-yk-accounts-pay-one {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my-yk-accounts-pay-one-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 24px;
+}
+.my-yk-accounts-pay-one-word {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.my-yk-accounts-pay-one-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+.my-yk-accounts-pay-one-subtitle {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.my-yk-accounts-pay-one-money {
+  color: #FFF;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.my-yk-accounts-pay-one-btn {
+  display: flex;
+  width: 140px;
+  padding: 8px 0;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 1px solid transparent;
+  background: #24272C;
+  background-clip: padding-box;
+  position: relative;
+  color: #8EA65C;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+.my-yk-accounts-pay-one-btn::after {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(172deg, rgb(80, 80, 80) 0%, rgb(0, 0, 0) 100%);
+  z-index: -1;
+  border-radius: 40px;
+}
+
+.my-yk-account-wrapper {
+  gap: 8px;
+}
+.my-yk-account-container {
+  display: flex;
+  gap: 48px;
+  padding-top: 8px;
+}
+.my-yk-account-tickets {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 24px 9px 0px 24px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.my-yk-account-tickets-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 376px;
+  padding-right: 12px;
+  overflow-y: scroll;
+}
+.my-yk-account-tickets-wrapper::-webkit-scrollbar {
+  width: 4px;
+}
+.my-yk-account-tickets-wrapper::-webkit-scrollbar-track {
+  margin-top: 20px;
+  border-radius: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  background: linear-gradient(137deg, #0F1113 0%, rgba(36, 39, 44, 0) 90.73%);
+}
+.my-yk-account-tickets-wrapper::-webkit-scrollbar-thumb {
+  border-radius: 40px;
+  background: #9CA4AC;
+}
+.my-yk-account-tickets-one {
+  display: flex;
+  justify-content: space-between;
+}
+.my-yk-account-tickets-one-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.my-yk-account-tickets-one-amount {
+  color: #FFF;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.my-yk-account-ticket-pay {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.my-yk-account-ticket-pay-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 320px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  padding: 24px;
+  gap: 24px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+.my-yk-account-ticket-pay-word {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 24px;
+  color: #FFF;
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+.my-yk-account-ticket-pay-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "rclt" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  height: 48px;
+  line-height: 24px;
+}
+.my-yk-account-calculate-title {
+  color: rgba(255, 255, 255, 0.3);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.my-yk-account-calculate-price {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.my-yk-account-calculate-price-one {
+  display: flex;
+  justify-content: space-between;
+}
+.my-yk-account-calculate-price-one-title {
+  color: var(--Dark-Colors-Text---Primary, #FFF);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+.my-yk-account-calculate-price-one-amount {
+  color: #FFF;
+  text-align: center;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+#go_to_pay {
+  border-radius: 40px;
+  border: 1px solid transparent;
+  background: linear-gradient(180deg, #3C4047 -33.04%, #1A1C1F 100%);
+  background-clip: padding-box;
+  position: relative;
+  color: #47B2FF;
+}
+#go_to_pay::after {
+  content: " ";
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  top: -1px;
+  left: -1px;
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(95, 101, 116) 100%);
+  z-index: -1;
+  border-radius: 40px;
+}
+
+#acc_duty {
+  color: #9E4F4F;
+}
+
+#when_to_pay {
+  color: #47B2FF;
+}
+
+#water_costs_2 {
+  height: 75%;
+}
+
+#electicity_costs_2 {
+  height: 70%;
+}
+
+#water_costs_3 {
+  height: 65%;
+}
+
+#electicity_costs_3 {
+  height: 60%;
+}
+
+#warm_costs_3 {
+  height: 20%;
+}
+
+#water_costs_4 {
+  height: 75%;
+}
+
+#electicity_costs_4 {
+  height: 70%;
+}
+
+#warm_costs_4 {
+  height: 35%;
+}
+
+#water_costs_5 {
+  height: 79%;
+}
+
+#electicity_costs_5 {
+  height: 63%;
+}
+
+#warm_costs_5 {
+  height: 35%;
+}
+
+#water_costs_6 {
+  height: 72%;
+}
+
+#electicity_costs_6 {
+  height: 57%;
+}
+
+#warm_costs_6 {
+  height: 35%;
+}
+
+.my-yk-main-top-company-name {
+  color: #FFF;
+  text-align: right;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.my-yk-main-top-word {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.my-yk-main-top-subtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-feature-settings: "rclt" off;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.pay-border,
+.pay-border2 {
+  position: relative;
+}
+.pay-border::after,
+.pay-border2::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -16px;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+.pay-border2::after {
+  bottom: -8px;
 }
 
 @keyframes rotate {
